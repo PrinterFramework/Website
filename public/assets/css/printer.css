@@ -1,0 +1,247 @@
+header#header { background: #383838; background: radial-gradient(circle, #383838 0%, #303030 100%); box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05); width: 100%; height: 60px; }
+
+header#header div.container { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 15px; }
+
+header#header div.menu { display: flex; height: 100%; }
+
+header#header a.item { display: flex; align-items: center; justify-content: center; height: 100%; padding: 5px 15px 0 15px; font-size: 18px; font-weight: 700; color: white; text-decoration: none; cursor: pointer; border-bottom: 5px solid transparent; }
+
+header#header a.item .icon { font-size: 20px; margin: 0 10px 0 0; }
+
+@media (max-width: 640px) { header#header a.item { padding: 0 10px; }
+  header#header a.item .icon { font-size: 24px; }
+  header#header a.item span { display: none; } }
+
+header#header a.item:hover { background: rgba(255, 255, 255, 0.1); }
+
+header#header a.item.active { border-bottom: 5px solid rgba(255, 255, 255, 0.75); }
+
+footer#footer { background: #383838; background: radial-gradient(circle, #383838 0%, #303030 100%); box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05); width: 100%; height: 60px; }
+
+footer#footer div.container { display: flex; align-items: center; justify-content: space-between; height: 100%; font-family: "Oswald"; font-size: 14px; padding: 0 30px; }
+
+footer#footer div.links { display: flex; align-items: center; height: 100%; }
+
+footer#footer div.links a.link { display: flex; align-items: center; padding: 0 15px; height: 100%; color: white; text-decoration: none; }
+
+footer#footer div.links a.link:hover { background: rgba(255, 255, 255, 0.1); }
+
+footer#footer div.links a.link svg { position: relative; top: 1px; margin: 0 5px 0 0; }
+
+@media (max-width: 768px) { footer#footer { height: auto; }
+  footer#footer div.container { flex-direction: column; padding: 0 0 60px 0; }
+  footer#footer div.container p { padding: 15px; }
+  footer#footer div.container a.link { padding: 15px; } }
+
+div.frame { position: relative; width: 700px; height: 100%; }
+
+div.frame div.frame-body { position: absolute; left: 0; top: -160px; width: 100%; height: 480px; background: rgba(16, 16, 16, 0.7); border-radius: 10px 10px 0 0; overflow: hidden; box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.1); }
+
+div.frame div.frame-content { width: 100%; height: 480px; padding: 35px 0 15px 0; overflow: hidden; }
+
+div.frame div.frame-top { position: absolute; left: 0; top: 0; width: 100%; height: 35px; z-index: 1; background: #2a2a2a; display: flex; align-items: center; padding: 0 10px; }
+
+div.frame div.frame-top div.frame-button { width: 15px; height: 15px; margin: 5px; border-radius: 50%; background: #E9524A; }
+
+div.frame div.frame-top div.frame-button.yellow { background: #F1AE1B; }
+
+div.frame div.frame-top div.frame-button.green { background: #59C837; }
+
+@keyframes fade { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+div.frame span.invisible { display: none; }
+
+div.frame span.space { padding: 0 5px; animation: fade; animation-duration: 0.5s; animation-fill-mode: forwards; }
+
+div.frame span.lamda { margin: 0 10px 0 0; }
+
+div.frame pre { font-family: monospace; font-size: 16px; padding: 15px; color: #59C837; }
+
+div.frame pre.bold { font-weight: bold; }
+
+div.frame pre.primary { color: #C49A0F; }
+
+div.frame textarea { font-family: monospace; font-size: 16px; padding: 15px; display: block; width: 100%; height: auto; resize: none; background: transparent; color: #59C837; overflow: hidden; outline: none; border: none; line-height: 1.5; }
+
+div.frame div.cursor { position: relative; top: 1px; display: inline-block; background: #59C837; width: 4px; height: 15px; margin: 0 0 0 5px; animation: glow; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 3s; }
+
+@keyframes glow { 0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; } }
+
+div.frame.doc { width: auto; height: auto; padding: 30px 0; }
+
+div.frame.doc.cli { max-width: 860px; margin: auto; }
+
+div.frame.doc.cli.less-padding { padding: 15px 0; }
+
+div.frame.doc.code { max-width: 860px; margin: auto; }
+
+div.frame.doc.code div.frame-body div.frame-content { padding: 35px 0 0 0; }
+
+div.frame.doc div.frame-body { position: relative; left: 0; top: 0; width: 100%; height: auto; border-radius: 10px; }
+
+div.frame.doc div.frame-body div.frame-content { height: auto; padding: 45px 0 15px 0; }
+
+div.frame.doc div.frame-body div.frame-content pre { padding: 5px 15px; }
+
+div.frame.title-frame { max-width: 100vw; width: 700px; }
+
+@media (max-width: 640px) { div.frame.title-frame { width: 100vw; } }
+
+div.frame.title-frame div.frame-body { width: 700px; }
+
+section.title { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 640px; border-bottom: 4px solid #404040; overflow: hidden; }
+
+section.title div.copy { display: flex; align-items: center; max-width: calc(1650px - 480px); padding: 30px; }
+
+section.title div.copy img { position: relative; top: -32px; height: 96px; }
+
+section.title div.copy div.text { padding: 30px 60px 30px 30px; }
+
+section.title div.copy h1 { font-size: 32px; }
+
+section.title div.copy p { font-size: 18px; }
+
+section.title div.copy div.buttons { display: flex; padding: 25px 0; }
+
+@media (max-width: 640px) { section.title div.copy { flex-direction: column; justify-content: center; }
+  section.title div.copy img { position: static; margin: 30px 0; }
+  section.title div.copy div.text { padding: 0; text-align: center; }
+  section.title div.copy div.buttons { justify-content: center; } }
+
+@media (max-width: 1024px) { section.title { flex-direction: column; }
+  section.title div.copy { position: relative; top: -150px; padding: 30px; } }
+
+section.sim { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 640px; border-bottom: 4px solid #404040; overflow: hidden; padding: 15px; }
+
+section.sim:last-of-type { border-bottom: none; }
+
+section.sim h2, section.sim p { text-align: center; }
+
+section.sim h2 { font-size: 24px; padding: 90px 0 10px 0; }
+
+section.sim div.buttons { display: flex; justify-content: center; padding: 30px 0 0 0; }
+
+section.sim div.buttons a.button { width: 200px; }
+
+@media (max-width: 640px) { section.sim div.buttons { flex-direction: column; align-items: center; }
+  section.sim div.buttons a.button { margin: 7.5px 0; } }
+
+section.sim div.multi-frame { display: flex; justify-content: center; padding: 215px 0 0 0; height: 480px; }
+
+section.sim div.multi-frame div.frame { margin: 0 15px; width: calc(50% - 30px); }
+
+section.sim div.multi-frame div.frame.small { width: calc(40% - 30px); }
+
+section.sim div.multi-frame div.frame.large { width: calc(60% - 30px); }
+
+section.sim div.multi-frame a.button { position: absolute; left: calc(50% - 100px); top: calc(50% - 40px); width: 200px; height: 40px; }
+
+@media (max-width: 1200px) { section.sim div.multi-frame { flex-wrap: wrap; height: auto; padding: 30px 0 0 0; }
+  section.sim div.multi-frame div.frame, section.sim div.multi-frame div.frame.small, section.sim div.multi-frame div.frame.large { position: static; width: 100%; height: auto; margin: 0; padding: 15px 0; }
+  section.sim div.multi-frame div.frame div.frame-body, section.sim div.multi-frame div.frame.small div.frame-body, section.sim div.multi-frame div.frame.large div.frame-body { position: relative; left: 0; top: 0; height: auto; border-radius: 9px; }
+  section.sim div.multi-frame div.frame div.frame-body div.frame-content, section.sim div.multi-frame div.frame.small div.frame-body div.frame-content, section.sim div.multi-frame div.frame.large div.frame-body div.frame-content { height: auto; }
+  section.sim div.multi-frame div.frame.small div.frame-body div.frame-content { position: relative; height: 240px; }
+  section.sim div.multi-frame div.frame.small div.frame-body div.frame-content a.button { top: 50%; } }
+
+div.doc-nav { width: 320px; height: calc(100vh - 120px); padding: 30px 15px; }
+
+@media (max-width: 1200px) { div.doc-nav { width: 100%; height: auto; } }
+
+div.doc-nav div.doc-nav-panel { background: #383838; background: radial-gradient(circle, #383838 0%, #303030 100%); box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05); width: 100%; border-radius: 9px; overflow: hidden; padding: 0 0 60px 0; }
+
+div.doc-nav h3 { display: flex; align-items: center; padding: 10px 15px 15px 15px; font-size: 24px; }
+
+div.doc-nav h3 img { position: relative; top: 2px; height: 32px; margin: 0 15px 0 0; }
+
+div.doc-nav h4 { font-size: 18px; padding: 10px 15px; }
+
+div.doc-nav a.link { display: flex; align-items: center; width: 100%; height: 40px; padding: 0 15px 0 30px; font-size: 14px; background: rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: white; text-decoration: none; font-weight: 600; }
+
+div.doc-nav a.link:last-of-type { border-bottom: 1px solid transparent; }
+
+div.doc-nav a.link:hover { background: rgba(255, 255, 255, 0.1); }
+
+div.doc-nav a.link.active { background: #C49A0F; }
+
+div.doc-display { width: calc(100% - 320px); padding: 30px 15px; }
+
+@media (max-width: 1200px) { div.doc-display { width: 100%; padding: 30px; } }
+
+div.doc-display h2 { font-size: 32px; padding: 0 0 15px 0; }
+
+div.doc-display p { font-size: 18px; line-height: 2; padding: 0 0 15px 0; }
+
+div.doc-display a { color: #C49A0F; font-weight: bold; }
+
+div.doc-display div.flex-frames { display: flex; flex-wrap: wrap; }
+
+div.doc-display div.flex-frames div.frame { width: calc(50% - 30px); margin: 0 30px 0 0; }
+
+@media (max-width: 1200px) { div.doc-display div.flex-frames div.frame { width: 100%; margin: 0; } }
+
+div.tour-title { padding: 30px; }
+
+div.tour-title h2 { display: flex; align-items: center; justify-content: center; font-size: 32px; padding: 0 0 30px 0; }
+
+div.tour-title h2 img { position: relative; top: 4px; height: 52px; margin: 0 15px 0 0; }
+
+@media (max-width: 640px) { div.tour-title h2 { flex-direction: column; }
+  div.tour-title h2 img { margin: 0 0 15px 0; } }
+
+div.tour-title p { font-size: 18px; text-align: center; padding: 0 0 30px 0; }
+
+div.tour-title div.buttons { display: flex; justify-content: center; }
+
+div.tour-title a.button { width: 260px; }
+
+@media (max-width: 640px) { div.tour-title div.buttons { flex-direction: column; align-items: center; }
+  div.tour-title div.buttons a.button { margin: 7.5px 0; } }
+
+div.tour-content { padding: 15px; max-width: 768px; margin: auto; }
+
+div.tour-content:last-of-type { padding: 15px 15px 90px 15px; }
+
+div.tour-content h3 { font-size: 24px; padding: 15px; }
+
+div.tour-content p { font-size: 18px; padding: 15px; line-height: 2; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1); }
+
+body { font-family: Montserrat; color: white; letter-spacing: 0.5px; background: #292929; background: radial-gradient(circle, #292929 0%, #1d1d1d 100%); }
+
+input, textarea, button { font-family: inherit; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Oswald"; }
+
+a { cursor: pointer; }
+
+section.container, div.container { width: 100%; max-width: 1650px; margin: auto; }
+
+section.container.page, div.container.page { min-height: calc(100vh - 90px); }
+
+section.container.flex, div.container.flex { display: flex; flex-wrap: wrap; }
+
+section.container.center, div.container.center { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+h2.not-found { font-size: 32px; }
+
+a.button { display: flex; align-items: center; justify-content: center; width: 140px; height: 35px; border-radius: 3px; font-size: 16px; font-weight: bold; background: #C49A0F; color: white; text-decoration: none; margin: 0 15px 0 0; cursor: pointer; }
+
+a.button:hover { background: #F2D577; }
+
+a.button .i, a.button .icon { margin: 0 8px 0 0; }
+
+a.brand { display: flex; align-items: center; font-family: "Oswald"; font-size: 24px; border-bottom: 4px solid transparent; height: 100%; padding: 0 15px; color: white; text-decoration: none; }
+
+a.brand img { position: relative; top: 3px; height: 32px; margin: 0 15px 0 0; }
+
+a.brand:hover { border-bottom: 4px solid rgba(255, 255, 255, 0.3); }
+
+@media (max-width: 480px) { a.brand span { display: none; } }
+
+div.monaco-editor * { transition: none; }

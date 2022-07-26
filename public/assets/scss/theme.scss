@@ -1,0 +1,30 @@
+// Fonts
+$headerFont: 'Oswald';
+$copyFont: 'Montserrat';
+
+// Core Color Theme
+$primary: #C49A0F;
+$primarylight: #F2D577;
+
+// Frame Theme
+$red: #E9524A;
+$yellow: #F1AE1B;
+$green: #59C837;
+
+@mixin backgroundGradient {
+  background: rgb(41, 41, 41);
+  background: radial-gradient(circle, rgba(41, 41, 41, 1) 0%, rgba(29, 29, 29, 1) 100%);
+}
+
+@mixin gradient2 {
+  background: rgb(56, 56, 56);
+  background: radial-gradient(circle, rgba(56, 56, 56, 1) 0%, rgba(48, 48, 48, 1) 100%);
+}
+
+@mixin boxshadow {
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+
+@mixin boxshadow2 {
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.1);
+}

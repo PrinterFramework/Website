@@ -1,0 +1,189 @@
+@import "theme.scss";
+
+div.frame {
+  position: relative;
+  width: 700px;
+  height: 100%;
+
+  div.frame-body {
+    position: absolute;
+    left: 0;
+    top: -160px;
+    width: 100%;
+    height: 480px;
+    background: rgba(16, 16, 16, 0.7);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    @include boxshadow2;
+  }
+
+  div.frame-content {
+    width: 100%;
+    height: 480px;
+    padding: 35px 0 15px 0;
+    overflow: hidden;
+  }
+
+  div.frame-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    z-index: 1;
+    background: rgb(42, 42, 42);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    div.frame-button {
+      width: 15px;
+      height: 15px;
+      margin: 5px;
+      border-radius: 50%;
+      background: $red;
+
+      &.yellow {
+        background: $yellow;
+      }
+      &.green {
+        background: $green;
+      }
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  span.invisible {
+    display: none;
+  }
+
+  span.space {
+    padding: 0 5px;
+    animation: fade;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  span.lamda {
+    margin: 0 10px 0 0;
+  }
+
+  pre {
+    font-family: monospace;
+    font-size: 16px;
+    padding: 15px;
+    color: $green;
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.primary {
+      color: $primary;
+    }
+  }
+
+  textarea {
+    font-family: monospace;
+    font-size: 16px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+    resize: none;
+    background: transparent;
+    color: $green;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    line-height: 1.5;
+  }
+
+  div.cursor {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    background: $green;
+    width: 4px;
+    height: 15px;
+    margin: 0 0 0 5px;
+
+    @keyframes glow {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    animation: glow;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+  }
+
+  &.doc {
+    width: auto;
+    height: auto;
+    padding: 30px 0;
+
+    &.cli {
+      max-width: 860px;
+      margin: auto;
+
+      &.less-padding {
+        padding: 15px 0;
+      }
+    }
+
+    &.code {
+      max-width: 860px;
+      margin: auto;
+
+      div.frame-body {
+        div.frame-content {
+          padding: 35px 0 0 0;
+        }
+      }
+    }
+
+    div.frame-body {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+
+      div.frame-content {
+        height: auto;
+        padding: 45px 0 15px 0;
+
+        pre {
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+
+
+  &.title-frame {
+    max-width: 100vw;
+    width: 700px;
+
+    @media (max-width: 640px) {
+      width: 100vw;
+    }
+
+    div.frame-body {
+      width: 700px;
+    }
+  }
+}

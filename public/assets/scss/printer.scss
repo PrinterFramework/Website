@@ -1,0 +1,121 @@
+@import "theme.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "frame.scss";
+@import "title.scss";
+@import "sim.scss";
+@import "docs.scss";
+@import "tour.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body {
+    font-family: Montserrat;
+    color: white;
+    letter-spacing: 0.5px;
+
+    @include backgroundGradient;
+}
+
+input, textarea, button {
+    font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFont;
+}
+
+a {
+    cursor: pointer;
+}
+
+section.container, div.container {
+    width: 100%;
+    max-width: 1650px;
+    margin: auto;
+
+    &.page {
+        min-height: calc(100vh - 90px);
+    }
+
+    &.flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &.center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+h2.not-found {
+    font-size: 32px;
+}
+
+a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 35px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    background: $primary;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+
+    &:hover {
+        background: $primarylight;
+    }
+
+    .i, .icon {
+        margin: 0 8px 0 0;
+    }
+}
+
+a.brand {
+    display: flex;
+    align-items: center;
+    font-family: $headerFont;
+    font-size: 24px;
+    border-bottom: 4px solid transparent;
+    height: 100%;
+    padding: 0 15px;
+    color: white;
+    text-decoration: none;
+
+    img {
+        position: relative;
+        top: 3px;
+        height: 32px;
+        margin: 0 15px 0 0;
+    }
+
+    &:hover {
+        border-bottom: 4px solid rgba(256, 256, 256, 0.3);
+    }
+
+    @media (max-width: 480px) {
+        span {
+            display: none;
+        }
+    }
+}
+
+div.monaco-editor * {
+    transition: none;
+}
