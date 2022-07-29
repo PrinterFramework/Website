@@ -1,6 +1,11 @@
 import Frame from 'components/index/frame'
 import Editor from 'components/shared/editor'
-import { IndexPage, TodoComponent, TodoComponentAdd, TodoComponentList } from './snippets'
+import {
+  IndexPage,
+  TodoComponent,
+  TodoComponentAdd,
+  TodoComponentList
+} from './snippets'
 
 export interface ComponentI {}
 
@@ -38,7 +43,8 @@ export function Component({}: ComponentI) {
 
       <p>
         Let&apos;s now start working on some business logic to add new todos.
-        The following adds a simple dispatch to add a new task to the To Do array.
+        The following adds a simple dispatch to add a new task to the To Do
+        array.
       </p>
 
       <Frame frameClassname="doc code">
@@ -46,8 +52,8 @@ export function Component({}: ComponentI) {
       </Frame>
 
       <p>
-        Now we need to start working on the list. The following adds mappable list
-        of all the tasks. With a checkbox to turn it on and off.
+        Now we need to start working on the list. The following adds mappable
+        list of all the tasks. With a checkbox to turn it on and off.
       </p>
 
       <Frame frameClassname="doc code">
