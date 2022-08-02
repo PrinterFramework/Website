@@ -19,6 +19,7 @@ export default function Inject() {
         benefit from Printer injections, you will need to setup all the
         decorators in your Slice first.
       </p>
+
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Usage</pre>
         <pre>λ printer inject [slice name] [component or page path]</pre>
@@ -27,6 +28,22 @@ export default function Inject() {
         </pre>
         <pre>λ printer inject example pages/example</pre>
         <pre>λ ...</pre>
+      </Frame>
+
+      <p>
+        You can optionally choose not to inject state or actions.
+        Add the --no-action or --no-state flags to choose not to add state or actions.
+      </p>
+
+        <Frame frameClassname="doc cli">
+        <pre className="bold primary">λ Example Usage</pre>
+        <pre>λ printer inject example pages/example --no-state</pre>
+        <pre>λ ... Injects only actions</pre>
+        <pre>λ printer inject example pages/example --no-action</pre>
+        <pre>λ ... Injects only state</pre>
+        <pre className="bold primary">λ Short hand usage</pre>
+        <pre>λ printer inject example pages/example -s</pre>
+        <pre>λ printer inject example pages/example -a</pre>
       </Frame>
 
       <p>

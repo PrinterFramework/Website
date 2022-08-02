@@ -62,7 +62,7 @@ div.frame pre.bold { font-weight: bold; }
 
 div.frame pre.primary { color: #C49A0F; }
 
-div.frame textarea { font-family: monospace; font-size: 16px; padding: 15px; display: block; width: 100%; height: auto; resize: none; background: transparent; color: #59C837; overflow: hidden; outline: none; border: none; line-height: 1.5; }
+div.frame textarea { font-family: monospace; font-size: 16px; padding: 15px; display: block; width: 100%; height: auto; resize: none; background: transparent; color: #59C837; overflow: hidden; outline: none; border: none; line-height: 1.5; pointer-events: none; }
 
 div.frame div.cursor { position: relative; top: 1px; display: inline-block; background: #59C837; width: 4px; height: 15px; margin: 0 0 0 5px; animation: glow; animation-timing-function: linear; animation-iteration-count: infinite; animation-duration: 3s; }
 
