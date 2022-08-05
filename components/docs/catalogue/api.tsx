@@ -12,11 +12,9 @@ export default function Api() {
       <h2>Creating API Routes</h2>
 
       <p>
-        The type command creates an interface and type in a Printer compatible
-        way. The generated code structure is mandatory to benefit from
-        Printer&apos;s automatic type declarations via injections. If the type
-        is not used for Printer decorations then there is no need to follow this
-        code structure.
+        The API route generates a baseline structure for you to develop REST
+        endpoints. It uses iron-session and utilizes the pre generated session
+        token. Nothing special, but definitely a timesaver.
       </p>
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Usage</pre>

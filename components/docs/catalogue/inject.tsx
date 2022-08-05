@@ -31,11 +31,11 @@ export default function Inject() {
       </Frame>
 
       <p>
-        You can optionally choose not to inject state or actions.
-        Add the --no-action or --no-state flags to choose not to add state or actions.
+        You can optionally choose not to inject state or actions. Add the
+        --no-action or --no-state flags to choose not to add state or actions.
       </p>
 
-        <Frame frameClassname="doc cli">
+      <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Example Usage</pre>
         <pre>λ printer inject example pages/example --no-state</pre>
         <pre>λ ... Injects only actions</pre>

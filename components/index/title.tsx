@@ -103,16 +103,16 @@ export function Title({}: TitleI) {
 
         <pre>
           <span className="lamda">λ</span>
-          {finished ? (
-            <div className="cursor" />
-          ) : (
+          {finished ? null : (
             <Typewriter
-              cursorRenderer={(cursor) => <div className="cursor" />}
-              text={textPrompts}
+              cursorRenderer={(cursor) => null}
+              text={textPrompts[index]}
               speed={50}
               eraseSpeed={1}
             />
           )}
+
+          <div className="cursor" />
         </pre>
       </Frame>
     </section>
