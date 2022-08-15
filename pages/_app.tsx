@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { wrapper } from 'redux/wrapper'
 import Header from 'components/shared/header'
 import Footer from 'components/shared/footer'
+import Splash from 'components/shared/splash'
 
 export class AppComponent extends App<AppInitialProps> {
   public static getInitialProps = async ({ Component, ctx }: AppContext) => {
@@ -49,6 +50,7 @@ export class AppComponent extends App<AppInitialProps> {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Header />
+        <Splash />
         <Component {...pageProps} />
         <Footer />
       </>
