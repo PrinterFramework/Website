@@ -11,3 +11,5 @@ export type SectionType =
   | 'page'
   | 'api'
   | 'crud'
+  | 'superagent'
+  | 'scss'

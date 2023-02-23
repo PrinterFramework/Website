@@ -1,12 +1,24 @@
-@import "theme.scss";
-@import "header.scss";
-@import "footer.scss";
-@import "frame.scss";
-@import "title.scss";
-@import "sim.scss";
-@import "docs.scss";
-@import "tour.scss";
-@import "splash.scss";
+@import "/scss/theme.scss";
+
+*::-webkit-scrollbar {
+    width: 12.5px;
+    background: transparentize($color: lighten($primary, 0%), $amount: 0.7);
+    border-left: 2px solid lighten(transparentize($color: lighten($primary, 0%), $amount: 0.6), 10%);
+    box-shadow: 0 0 5px 5px transparentize($color: lighten($primary, 0%), $amount: 0.88);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparentize($color: lighten($primary, 0%), $amount: 0.3);
+    box-shadow: 0 0 5px 5px transparentize($color: lighten($primary, 0%), $amount: 0.88);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: transparentize($color: lighten($primary, 10%), $amount: 0.2);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: transparentize($color: lighten($primary, 10%), $amount: 0.1);
+}
 
 *,
 *::before,

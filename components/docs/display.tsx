@@ -12,10 +12,12 @@ import Page from './catalogue/page'
 import Api from './catalogue/api'
 import CRUD from './catalogue/crud'
 import Inject from './catalogue/inject'
+import Scss from './catalogue/scss'
+import Superagent from './catalogue/superagent'
 
-export interface DisplayI {}
+export interface DisplayI { }
 
-export function Display({}: DisplayI) {
+export function Display({ }: DisplayI) {
   const router = useRouter()
   const section = router.query.section as SectionType
 
@@ -44,6 +46,10 @@ export function Display({}: DisplayI) {
       return <CRUD />
     case 'inject':
       return <Inject />
+    case 'scss':
+      return <Scss />
+    case 'superagent':
+      return <Superagent />
   }
 
   return <div className="doc-display" />

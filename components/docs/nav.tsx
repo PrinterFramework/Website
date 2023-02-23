@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { SectionType } from 'components/docs/section'
 
-export interface NavI {}
+export interface NavI { }
 
-export function Nav({}: NavI) {
+export function Nav({ }: NavI) {
   const router = useRouter()
   const section = router.query.section as SectionType
 
@@ -19,27 +19,24 @@ export function Nav({}: NavI) {
         <div className="links">
           <Link href="/docs/getting-started">
             <a
-              className={`link ${
-                section === 'getting-started' ? 'active' : ''
-              }`}
+              className={`link ${section === 'getting-started' ? 'active' : ''
+                }`}
             >
               1. Getting Started
             </a>
           </Link>
           <Link href="/docs/suggested-structure">
             <a
-              className={`link ${
-                section === 'suggested-structure' ? 'active' : ''
-              }`}
+              className={`link ${section === 'suggested-structure' ? 'active' : ''
+                }`}
             >
               2. Suggested Structure
             </a>
           </Link>
           <Link href="/docs/folder-overview">
             <a
-              className={`link ${
-                section === 'folder-overview' ? 'active' : ''
-              }`}
+              className={`link ${section === 'folder-overview' ? 'active' : ''
+                }`}
             >
               3. Folder Overview
             </a>
@@ -79,9 +76,22 @@ export function Nav({}: NavI) {
               Slice
             </a>
           </Link>
+          <Link href="/docs/scss">
+            <a className={`link ${section === 'scss' ? 'active' : ''}`}>
+              SCSS
+            </a>
+          </Link>
+        </div>
+        <h4>Injections</h4>
+        <div className="links">
           <Link href="/docs/inject">
             <a className={`link ${section === 'inject' ? 'active' : ''}`}>
-              Inject
+              Slices
+            </a>
+          </Link>
+          <Link href="/docs/superagent">
+            <a className={`link ${section === 'superagent' ? 'active' : ''}`}>
+              Superagent
             </a>
           </Link>
         </div>

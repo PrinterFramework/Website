@@ -65,7 +65,7 @@ export default function GettingStarted() {
         </pre>
         <pre>λ yarn lint</pre>
         <pre className="bold primary">
-          λ Compiles the public/assets/scss/printer.scss file
+          λ Debugs the scss/printer.scss file in scss/debug
         </pre>
         <pre>λ yarn scss</pre>
         <pre className="bold primary">

@@ -5,9 +5,6 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" href="/assets/image/printer.png" />
-        <link rel="stylesheet" href="/assets/css/reset.css" />
-        <link rel="stylesheet" href="/assets/css/fonts.css" />
-        <link rel="stylesheet" href="/assets/css/printer.css" />
       </Head>
       <body>
         <Main />

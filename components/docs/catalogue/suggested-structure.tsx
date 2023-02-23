@@ -36,7 +36,7 @@ export default function SuggestedStructure() {
       </p>
       <Frame frameClassname="doc cli">
         <pre className="bold primary">
-          λ Debug SSG SCSS with the yarn scss command
+          λ Debug SCSS with the yarn scss command
         </pre>
         <pre>λ yarn scss</pre>
       </Frame>
