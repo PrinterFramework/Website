@@ -14,6 +14,7 @@ import CRUD from './catalogue/crud'
 import Inject from './catalogue/inject'
 import Scss from './catalogue/scss'
 import Superagent from './catalogue/superagent'
+import Prisma from './catalogue/prisma'
 
 export interface DisplayI { }
 
@@ -50,6 +51,8 @@ export function Display({ }: DisplayI) {
       return <Scss />
     case 'superagent':
       return <Superagent />
+    case 'prisma':
+      return <Prisma />
   }
 
   return <div className="doc-display" />

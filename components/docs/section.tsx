@@ -13,3 +13,4 @@ export type SectionType =
   | 'crud'
   | 'superagent'
   | 'scss'
+  | 'prisma'

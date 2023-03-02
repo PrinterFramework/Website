@@ -68,9 +68,6 @@ export function Nav({ }: NavI) {
           <Link href="/docs/api">
             <a className={`link ${section === 'api' ? 'active' : ''}`}>API</a>
           </Link>
-          <Link href="/docs/crud">
-            <a className={`link ${section === 'crud' ? 'active' : ''}`}>CRUD</a>
-          </Link>
           <Link href="/docs/slice">
             <a className={`link ${section === 'slice' ? 'active' : ''}`}>
               Slice
@@ -93,6 +90,15 @@ export function Nav({ }: NavI) {
             <a className={`link ${section === 'superagent' ? 'active' : ''}`}>
               Superagent
             </a>
+          </Link>
+        </div>
+        <h4>Prisma</h4>
+        <div className="links">
+          <Link href="/docs/crud">
+            <a className={`link ${section === 'crud' ? 'active' : ''}`}>CRUD</a>
+          </Link>
+          <Link href="/docs/prisma">
+            <a className={`link ${section === 'prisma' ? 'active' : ''}`}>Type Generation</a>
           </Link>
         </div>
       </div>
