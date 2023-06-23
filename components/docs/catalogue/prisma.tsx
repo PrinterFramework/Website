@@ -31,7 +31,7 @@ export function Prisma({ }: PrismaI) {
           code={`generator client {
   provider = "prisma-client-js"
 }
-          
+
 datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
@@ -59,7 +59,7 @@ model Posts {
 
   @@index(accountId)
   @@index(dateCreated)
-}          
+}
 `}
         />
       </Frame>
@@ -70,15 +70,17 @@ model Posts {
         <Editor
           height={210}
           code={`// types/prisma/Account.tsx
-export interface Account {
+import PostsType from 'types/prisma/Posts'
+
+export interface AccountType {
   id?: string
   username?: string
-  posts?: any[]
+  posts?: PostsType[]
   dateCreated?: Date
   dateUpdated?: Date
 }
 
-export default Account
+export default AccountType
 `}
         />
       </Frame>
@@ -87,17 +89,19 @@ export default Account
         <Editor
           height={280}
           code={`// types/prisma/Posts.tsx
-export interface Posts {
+import AccountType from 'types/prisma/Account'
+
+export interface PostsType {
   id?: string
   accountId?: string
   title?: string
   content?: string
-  account?: any
+  account?: AccountType
   dateCreated?: Date
   dateUpdated?: Date
 }
 
-export default Posts          
+export default PostsType
 `}
         />
       </Frame>

@@ -7,7 +7,7 @@ export function Footer({}: FooterI) {
   return (
     <footer id="footer">
       <div className="container">
-        <p>&#169; Chris Cates 2022</p>
+        <p>Chris Cates &#169; 2023</p>
 
         <div className="links">
           <a
