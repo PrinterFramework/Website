@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Frame from 'components/index/frame'
 import Editor from 'components/shared/editor'
 
-export interface PrismaI { }
+export interface PrismaI {}
 
-export function Prisma({ }: PrismaI) {
+export function Prisma({}: PrismaI) {
   return (
     <div className="doc-display">
       <Head>
@@ -14,9 +14,10 @@ export function Prisma({ }: PrismaI) {
       <h2>Prisma Type Generation</h2>
 
       <p>
-        The Prisma command will generate types dynamically based on your Prisma Schema.
-        This is very useful to plug in your prisma types for your project quickly and easily.
-        If Printer cannot identify the type. It will default to the any type.
+        The Prisma command will generate types dynamically based on your Prisma
+        Schema. This is very useful to plug in your prisma types for your
+        project quickly and easily. If Printer cannot identify the type. It will
+        default to the any type.
       </p>
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Usage</pre>

@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Frame from 'components/index/frame'
 import Editor from 'components/shared/editor'
 
-export interface SuperagentI { }
+export interface SuperagentI {}
 
-export function Superagent({ }: SuperagentI) {
+export function Superagent({}: SuperagentI) {
   return (
     <div className="doc-display">
       <Head>
@@ -13,8 +13,9 @@ export function Superagent({ }: SuperagentI) {
 
       <h2>Creating Superagent Flows</h2>
       <p>
-        The superagent command automatically injects a superagent request into a component.
-        You can specify between POST, PATCH, PUT, DELETE, GET for requests.
+        The superagent command automatically injects a superagent request into a
+        component. You can specify between POST, PATCH, PUT, DELETE, GET for
+        requests.
       </p>
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Usage</pre>
@@ -27,7 +28,8 @@ export function Superagent({ }: SuperagentI) {
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This is what components/example.tsx looks like before the superagent injection.
+        This is what components/example.tsx looks like before the superagent
+        injection.
       </p>
 
       <Frame frameClassname="doc code">
@@ -49,7 +51,8 @@ export default Example
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This is what components/example.tsx looks like after the superagent injection.
+        This is what components/example.tsx looks like after the superagent
+        injection.
       </p>
 
       <Frame frameClassname="doc code">

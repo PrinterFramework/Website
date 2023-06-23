@@ -16,9 +16,9 @@ import Scss from './catalogue/scss'
 import Superagent from './catalogue/superagent'
 import Prisma from './catalogue/prisma'
 
-export interface DisplayI { }
+export interface DisplayI {}
 
-export function Display({ }: DisplayI) {
+export function Display({}: DisplayI) {
   const router = useRouter()
   const section = router.query.section as SectionType
 

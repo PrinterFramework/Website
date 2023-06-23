@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Frame from 'components/index/frame'
 import Editor from 'components/shared/editor'
 
-export interface ScssI { }
+export interface ScssI {}
 
-export function Scss({ }: ScssI) {
+export function Scss({}: ScssI) {
   return (
     <div className="doc-display">
       <Head>
@@ -14,9 +14,9 @@ export function Scss({ }: ScssI) {
       <h2>Creating SCSS Files</h2>
 
       <p>
-        The SCSS command creates a new SCSS file. This SCSS file gets automatically
-        added to the printer.scss file as well as automatically adds the theme.scss
-        file as an import
+        The SCSS command creates a new SCSS file. This SCSS file gets
+        automatically added to the printer.scss file as well as automatically
+        adds the theme.scss file as an import
       </p>
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Usage</pre>
@@ -32,7 +32,8 @@ export function Scss({ }: ScssI) {
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This then generates in the file scss/example.scss the following code. Pretty simple.
+        This then generates in the file scss/example.scss the following code.
+        Pretty simple.
       </p>
       <Frame frameClassname="doc code">
         <Editor
