@@ -22,11 +22,11 @@ export default function Page() {
         <pre className="bold primary">λ Example Usage</pre>
         <pre>λ printer page example</pre>
         <pre className="bold primary">λ This command then creates</pre>
-        <pre>λ pages/example.tsx</pre>
+        <pre>λ app/example/page.tsx</pre>
         <pre>λ ...</pre>
         <pre>λ printer page multi/folder/example</pre>
         <pre className="bold primary">λ This command then creates</pre>
-        <pre>λ pages/multi/folder/example.tsx</pre>
+        <pre>λ app/multi/folder/example/page.tsx</pre>
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
@@ -34,11 +34,19 @@ export default function Page() {
       </p>
       <Frame frameClassname="doc code">
         <Editor
-          height={180}
-          code={`export interface ExampleI {}
+          height={280}
+          code={`'use client'
 
-export default function Example({}: ExampleI) {
-  return <h1>Page Example</h1>
+export interface ExamplePageI {
+
+}
+
+export default function ExamplePage({}: ExamplePageI) {
+  return (
+    <div className="container page">
+      <p>Example Page</p>
+    </div>
+  )
 }
 `}
         />
@@ -49,32 +57,40 @@ export default function Example({}: ExampleI) {
         the inject command on a page just like you would a component.
       </p>
       <Frame frameClassname="doc cli">
-        <pre>λ printer inject example pages/example</pre>
+        <pre>λ printer inject counter app/example/page</pre>
         <pre>λ ...</pre>
         <pre className="bold primary">
           λ This command then injects redux state into
         </pre>
-        <pre>λ pages/example.tsx</pre>
+        <pre>λ app/example/page.tsx</pre>
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This then updates the file in pages/example.tsx with the following code.
+        This then updates the file in app/example/page.tsx with the following code.
       </p>
       <Frame frameClassname="doc code">
         <Editor
-          height={280}
-          code={`import ExampleType from 'types/example'
-import { setExampleData } from 'redux/slice/example'
-import { useSelector, useDispatch } from 'react-redux'
+          height={420}
+          code={`'use client'
+import CounterType from 'types/counter'
+import { reset, increment, decrement } from 'redux/slice/counter'
+import { useAppSelector, useAppDispatch } from 'redux/hooks'
 
-export interface ExampleI {}
+export interface ExamplePageI {
 
-export default function Example({}: ExampleI) {
-  const dispatch = useDispatch()
-  const exampleData = useSelector((state: { example: { exampleData: ExampleType } }) => ({ ...state.example.exampleData }))
+}
 
-  return <h1>Page Example</h1>
-}`}
+export default function ExamplePage({}: ExamplePageI) {
+  const dispatch = useAppDispatch()
+  const data = useAppSelector((state) => ({ ...state.counter.data }))
+
+  return (
+    <div className="container page">
+      <p>Example Page</p>
+    </div>
+  )
+}
+`}
         />
       </Frame>
     </div>

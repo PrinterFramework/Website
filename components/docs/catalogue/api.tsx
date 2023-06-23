@@ -35,24 +35,34 @@ export default function Api() {
       </p>
       <Frame frameClassname="doc code">
         <Editor
-          height={360}
-          code={`import { NextApiRequest, NextApiResponse } from 'next'
-import { withIronSessionApiRoute } from 'iron-session/next'
-import { Session } from 'util/session'
+          height={520}
+          code={`import { NextRequest, NextResponse } from 'next/server'
+import { getSession, createResponse } from 'util/session'
 
-export const ExampleRoute = withIronSessionApiRoute(
-  async (req: NextApiRequest, res: NextApiResponse) => {
-    try {
-      res.status(200).send({ status: 'OK' })
-    } catch (error) {
-      console.error(error)
-      res.status(500).send({ status: 'ERROR', error })
-    }
-  },
-  Session
-)
+export async function GET(req: NextRequest) {
+  const res = new NextResponse()
+  const session = await getSession(req, res)
+  const { searchParams } = new URL(req.url)
 
-export default ExampleRoute`}
+  try {
+    return createResponse(
+      res,
+      JSON.stringify({
+        status: 'OK',
+        session
+      }),
+      { status: 200 }
+    )
+  } catch (error) {
+    console.error(error)
+    return createResponse(
+      res,
+      JSON.stringify({ status: 'ERROR', error }),
+      { status: 500 }
+    )
+  }
+}
+`}
         />
       </Frame>
     </div>

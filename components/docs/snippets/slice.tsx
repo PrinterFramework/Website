@@ -64,18 +64,23 @@ export const exampleSlice = createSlice({
 export const { setExampleData } = exampleSlice.actions
 `
 
-export const ExampleInjection = `import ExampleType from 'types/example'
-import { setExampleData } from 'redux/slice/example'
-import { useSelector, useDispatch } from 'react-redux'
+export const ExampleInjection = `'use client'
+import CounterType from 'types/counter'
+import { reset, increment, decrement } from 'redux/slice/counter'
+import { useAppSelector, useAppDispatch } from 'redux/hooks'
 
-export interface ExampleI {}
+export interface ExamplePageI {
 
-export default function Example({}: ExampleI) {
-  const dispatch = useDispatch()
-  const exampleData = useSelector((state: { example: { exampleData: ExampleType } }) => ({ ...state.example.exampleData }))
-  const exampleItems = useSelector((state: { example: { exampleItems: ExampleType[] } }) => ([ ...state.example.exampleItems ]))
+}
 
-  const data = useSelector((state: any) => ({ ...state.example.data }))
-  return <h1>Page Example</h1>
+export default function ExamplePage({}: ExamplePageI) {
+  const dispatch = useAppDispatch()
+  const data = useAppSelector((state) => ({ ...state.counter.data }))
+
+  return (
+    <div className="container page">
+      <p>Example Page</p>
+    </div>
+  )
 }
 `

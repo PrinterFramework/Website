@@ -45,7 +45,7 @@ export function Example({}: ExampleI) {
   )
 }
 
-export default Example    
+export default Example
 `}
         />
       </Frame>
@@ -64,26 +64,26 @@ import { useState } from 'react'
 export interface ExampleI {}
 
 export function Example({}: ExampleI) {
-const [loading, setLoading] = useState(false)
-const [error, setError] = useState(false)
-const [errorMessage, setErrorMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
-async function postRequest() {
-    setLoading(true)
-    setError(false)
-    try {
-        const payload = await post('/api/url')
-    } catch (error) {
-        console.error(error)
-        setError(true)
-        setErrorMessage('Something went wrong...')
-    }
-    setLoading(false)
-}
+  async function postRequest() {
+      setLoading(true)
+      setError(false)
+      try {
+          const payload = await post('/api/url')
+      } catch (error) {
+          console.error(error)
+          setError(true)
+          setErrorMessage('Something went wrong...')
+      }
+      setLoading(false)
+  }
 
-useEffect(() => {
-    postRequest()
-}, [loading])
+  useEffect(() => {
+      postRequest()
+  }, [loading])
 
   return (
     <div>
@@ -93,7 +93,7 @@ useEffect(() => {
 }
 
 export default Example
-             
+
 `}
         />
       </Frame>

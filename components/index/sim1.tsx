@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react'
 
 export interface Sim1I {}
 
-export const SimText = ['printer inject login components/login']
+export const SimText = ['printer inject counter app/example/page']
 
 export function Sim1({}: Sim1I) {
   const [start, setStart] = useState(false)

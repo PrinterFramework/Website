@@ -38,15 +38,20 @@ export const { addTodo, setTodoStatus } = todoSlice.actions
 
 export const TodoComponent = `// in components/todo/add.tsx
 // components/todo/list.tsx will look similar to this
-import TodoType from 'types/todo'
-import { addTodo, setTodoStatus } from 'redux/slice/todo'
-import { useSelector, useDispatch } from 'react-redux'
+import { addTodo } from 'redux/slice/todo'
+import { useAppDispatch } from 'redux/hooks'
+import { useState } from 'react'
 
 export interface AddI {}
 
 export function Add({}: AddI) {
-  const dispatch = useDispatch()
-  const todos = useSelector((state: { todo: { todos: TodoType[] } }) => ([ ...state.todo.todos ]))
+  const dispatch = useAppDispatch()
+  const [task, setTask] = useState('')
+
+  function addNewTodo() {
+    dispatch(addTodo(task))
+    setTask('')
+  }
 
   return (
     <div>
@@ -58,35 +63,31 @@ export function Add({}: AddI) {
 export default Add
 `
 
-export const IndexPage = `// in pages/index.tsx
-import Add from 'components/todo/add'
-import List from 'components/todo/list'
+export const IndexPage = `// in app/page.tsx
+'use client'
 
-export interface IndexI {}
+import Add from "components/add"
+import List from "components/list"
 
-export default function Index({}: IndexI) {
+export default function RootPage() {
   return (
-    <div className="container">
+    <section className="container page center">
       <Add />
       <List />
-    </div>
+    </section>
   )
-}`
+}
+`
 
-export const TodoComponentAdd = `// in components/todo/add.tsx
-import TodoType from 'types/todo'
-import { addTodo, setTodoStatus } from 'redux/slice/todo'
-import { useSelector, useDispatch } from 'react-redux'
+export const TodoComponentAdd = `// in components/add.tsx
+import { addTodo } from 'redux/slice/todo'
+import { useAppDispatch } from 'redux/hooks'
 import { useState } from 'react'
 
 export interface AddI {}
 
 export function Add({}: AddI) {
-  const dispatch = useDispatch()
-  const todos = useSelector((state: { todo: { todos: TodoType[] } }) => ([
-    ...state.todo.todos
-  ]))
-
+  const dispatch = useAppDispatch()
   const [task, setTask] = useState('')
 
   function addNewTodo() {
@@ -110,18 +111,17 @@ export function Add({}: AddI) {
   )
 }
 
-export default Add`
+export default Add
+`
 
-export const TodoComponentList = `// in components/todo/list.tsx
-import TodoType from 'types/todo'
-import { addTodo, setTodoStatus } from 'redux/slice/todo'
-import { useSelector, useDispatch } from 'react-redux'
+export const TodoComponentList = `import { setTodoStatus } from 'redux/slice/todo'
+import { useAppSelector, useAppDispatch } from 'redux/hooks'
 
 export interface ListI {}
 
 export function List({}: ListI) {
-  const dispatch = useDispatch()
-  const todos = useSelector((state: { todo: { todos: TodoType[] } }) => [
+  const dispatch = useAppDispatch()
+  const todos = useAppSelector((state) => [
     ...state.todo.todos
   ])
 

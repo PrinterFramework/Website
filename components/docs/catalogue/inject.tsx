@@ -37,13 +37,13 @@ export default function Inject() {
 
       <Frame frameClassname="doc cli">
         <pre className="bold primary">λ Example Usage</pre>
-        <pre>λ printer inject example pages/example --no-state</pre>
+        <pre>λ printer inject example app/example/page --no-state</pre>
         <pre>λ ... Injects only actions</pre>
-        <pre>λ printer inject example pages/example --no-action</pre>
+        <pre>λ printer inject example app/example/page --no-action</pre>
         <pre>λ ... Injects only state</pre>
         <pre className="bold primary">λ Short hand usage</pre>
-        <pre>λ printer inject example pages/example -s</pre>
-        <pre>λ printer inject example pages/example -a</pre>
+        <pre>λ printer inject example app/example/page -s</pre>
+        <pre>λ printer inject example app/example/page -a</pre>
       </Frame>
 
       <p>
@@ -64,7 +64,7 @@ export default function Inject() {
       </p>
 
       <Frame frameClassname="doc cli">
-        <pre>λ printer inject example pages/example</pre>
+        <pre>λ printer inject counter app/example/page</pre>
         <pre>λ ...</pre>
       </Frame>
 
@@ -73,7 +73,7 @@ export default function Inject() {
       </p>
 
       <Frame frameClassname="doc code">
-        <Editor height={300} code={ExampleInjection} />
+        <Editor height={420} code={ExampleInjection} />
       </Frame>
     </div>
   )

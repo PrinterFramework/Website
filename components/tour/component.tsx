@@ -20,8 +20,8 @@ export function Component({}: ComponentI) {
       </p>
 
       <Frame frameClassname="doc cli">
-        <pre>λ printer component components/todo/add</pre>
-        <pre>λ printer component components/todo/list</pre>
+        <pre>λ printer component components/add</pre>
+        <pre>λ printer component components/list</pre>
       </Frame>
 
       <p>Then, add these Components to the index page.</p>

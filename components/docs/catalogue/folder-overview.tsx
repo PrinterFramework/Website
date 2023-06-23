@@ -26,14 +26,14 @@ export default function FolderOverview() {
         <pre>λ redux/slice/[name].tsx</pre>
         <br />
         <pre className="bold primary">
-          λ Pages get generated in the pages folder
+          λ Pages get generated in the app folder
         </pre>
-        <pre>λ pages/[name].tsx</pre>
+        <pre>λ app/[name]/page.tsx</pre>
         <br />
         <pre className="bold primary">
-          λ API Routes get generated in the pages/api folder
+          λ API Routes get generated in the app/api folder
         </pre>
-        <pre>λ pages/api/[name].tsx</pre>
+        <pre>λ app/api/[name]/route.tsx</pre>
       </Frame>
       <p>
         If you&apos;re adding slices to a Printer project. It is recommended you
@@ -47,7 +47,7 @@ export default function FolderOverview() {
         <pre className="bold primary">
           λ You need to manually update reducers.json if importing a slice
         </pre>
-        <pre>λ /redux/reducers.json</pre>
+        <pre>λ redux/reducers.json</pre>
         <pre className="bold primary">
           λ Use Printer if possible and then import business logic to the new
           slice

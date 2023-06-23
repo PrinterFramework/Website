@@ -9,6 +9,7 @@ export default function GettingStarted() {
       </Head>
 
       <h2>1. Getting Started</h2>
+
       <p>
         You can install Printer via npm or yarn. Printer is compatible with both
         UNIX and Windows Operating Systems. The Printer CLI tool at minimum
