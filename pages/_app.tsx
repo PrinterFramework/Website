@@ -5,6 +5,7 @@ import { wrapper } from 'redux/wrapper'
 import Header from 'components/shared/header'
 import Footer from 'components/shared/footer'
 import Splash from 'components/shared/splash'
+import Disclaimer from 'components/shared/disclaimer'
 
 export class AppComponent extends App<AppInitialProps> {
   public static getInitialProps = async ({ Component, ctx }: AppContext) => {
@@ -51,6 +52,7 @@ export class AppComponent extends App<AppInitialProps> {
         </Head>
         <Header />
         <Splash />
+        <Disclaimer />
         <Component {...pageProps} />
         <Footer />
       </>
