@@ -50,7 +50,7 @@ export function Nav({}: NavI) {
             </a>
           </Link>
         </div>
-        <h4>Commands</h4>
+        <h4>Macros</h4>
         <div className="links">
           <Link href="/docs/new-project">
             <a className={`link ${section === 'new-project' ? 'active' : ''}`}>
@@ -67,6 +67,21 @@ export function Nav({}: NavI) {
           </Link>
           <Link href="/docs/page">
             <a className={`link ${section === 'page' ? 'active' : ''}`}>Page</a>
+          </Link>
+          <Link href="/docs/layout">
+            <a className={`link ${section === 'layout' ? 'active' : ''}`}>
+              Layout
+            </a>
+          </Link>
+          <Link href="/docs/loading">
+            <a className={`link ${section === 'loading' ? 'active' : ''}`}>
+              Loading
+            </a>
+          </Link>
+          <Link href="/docs/error">
+            <a className={`link ${section === 'error' ? 'active' : ''}`}>
+              Error
+            </a>
           </Link>
           <Link href="/docs/api">
             <a className={`link ${section === 'api' ? 'active' : ''}`}>API</a>

@@ -15,6 +15,9 @@ import Inject from './catalogue/inject'
 import Scss from './catalogue/scss'
 import Superagent from './catalogue/superagent'
 import Prisma from './catalogue/prisma'
+import Layout from './catalogue/layout'
+import Loading from './catalogue/loading'
+import Error from './catalogue/error'
 
 export interface DisplayI {}
 
@@ -41,6 +44,12 @@ export function Display({}: DisplayI) {
       return <Slice />
     case 'page':
       return <Page />
+    case 'layout':
+      return <Layout />
+    case 'loading':
+      return <Loading />
+    case 'error':
+      return <Error />
     case 'api':
       return <Api />
     case 'crud':
@@ -54,8 +63,6 @@ export function Display({}: DisplayI) {
     case 'prisma':
       return <Prisma />
   }
-
-  return <div className="doc-display" />
 }
 
 export default Display

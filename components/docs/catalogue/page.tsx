@@ -30,7 +30,7 @@ export default function Page() {
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This then generates in the file pages/example.tsx the following code.
+        This then generates in the file app/example/page.tsx the following code.
       </p>
       <Frame frameClassname="doc code">
         <Editor
@@ -66,7 +66,8 @@ export default function ExamplePage({}: ExamplePageI) {
       </Frame>
 
       <p style={{ textAlign: 'center' }}>
-        This then updates the file in app/example/page.tsx with the following code.
+        This then updates the file in app/example/page.tsx with the following
+        code.
       </p>
       <Frame frameClassname="doc code">
         <Editor
