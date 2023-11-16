@@ -39,14 +39,12 @@ export default function Slice() {
         Running this command generates the following code.
       </p>
 
-      <div className="flex-frames">
-        <Frame frameClassname="doc code">
-          <Editor height={340} code={ReducersUpdate} />
-        </Frame>
-        <Frame frameClassname="doc code">
-          <Editor height={340} code={ReducersSlice} />
-        </Frame>
-      </div>
+      <Frame frameClassname="doc code">
+        <Editor height={340} code={ReducersUpdate} />
+      </Frame>
+      <Frame frameClassname="doc code">
+        <Editor height={340} code={ReducersSlice} />
+      </Frame>
 
       <p>
         One of the highlights of Printer is the Slice injections possible with

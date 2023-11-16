@@ -2,25 +2,24 @@
 
 div.frame {
   position: relative;
-  width: 700px;
-  height: 100%;
+  overflow: hidden;
+  color: $frame-text;
+  border: 1px solid transparentize($color: #FFF, $amount: 0.95);
+  @include boxshadow2;
+  border-radius: 9px;
 
   div.frame-body {
-    position: absolute;
-    left: 0;
-    top: -160px;
+    position: relative;
     width: 100%;
-    height: 480px;
-    background: rgba(16, 16, 16, 0.7);
-    border-radius: 10px 10px 0 0;
+    height: 100%;
+    background: $frame-body;
     overflow: hidden;
-    @include boxshadow2;
   }
 
   div.frame-content {
     width: 100%;
-    height: 480px;
-    padding: 35px 0 15px 0;
+    height: 100%;
+    padding: 35px 0 0 0;
     overflow: hidden;
   }
 
@@ -31,21 +30,40 @@ div.frame {
     width: 100%;
     height: 35px;
     z-index: 1;
-    background: rgb(42, 42, 42);
+    background: $frame-header;
+    color: $frame-text;
     display: flex;
     align-items: center;
     padding: 0 10px;
+    border-radius: 10px 10px 0 0;
+
+    a.frame-square {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 14px;
+      color: $primary;
+    }
+
+    a.frame-plus {
+      position: absolute;
+      right: 35px;
+      top: 10px;
+      font-size: 14px;
+      color: $primary;
+    }
 
     div.frame-button {
-      width: 15px;
-      height: 15px;
-      margin: 5px;
+      width: 12px;
+      height: 12px;
+      margin: 5px 2.5px;
       border-radius: 50%;
       background: $red;
 
       &.yellow {
         background: $yellow;
       }
+
       &.green {
         background: $green;
       }
@@ -133,20 +151,20 @@ div.frame {
   &.doc {
     width: auto;
     height: auto;
-    padding: 30px 0;
+    margin: 30px 0;
 
     &.cli {
       max-width: 860px;
-      margin: auto;
+      margin: 30px auto;
 
       &.less-padding {
-        padding: 15px 0;
+        margin: 15px auto;
       }
     }
 
     &.code {
       max-width: 860px;
-      margin: auto;
+      margin: 30px auto;
 
       div.frame-body {
         div.frame-content {

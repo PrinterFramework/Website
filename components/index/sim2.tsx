@@ -31,10 +31,10 @@ export function Sim2({}: Sim2I) {
         </div>
         <div className="multi-frame">
           <Frame contentClassName="sim-code">
-            <Editor code={Sim2Frame1} height={420} />
+            <Editor code={Sim2Frame1} height="100%" />
           </Frame>
           <Frame contentClassName="sim-code">
-            <Editor code={Sim2Frame2} height={420} />
+            <Editor code={Sim2Frame2} height="100%" />
           </Frame>
         </div>
       </div>

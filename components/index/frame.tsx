@@ -1,4 +1,6 @@
 import { ReactNode } from 'react'
+import { AiOutlinePrinter } from 'react-icons/ai'
+import { HiOutlineSquare2Stack } from 'react-icons/hi2'
 
 export interface FrameI {
   children?: ReactNode
@@ -20,6 +22,13 @@ export function Frame({
           <div className="frame-button red" />
           <div className="frame-button yellow" />
           <div className="frame-button green" />
+
+          <a className="frame-plus">
+            <AiOutlinePrinter />
+          </a>
+          <a className="frame-square">
+            <HiOutlineSquare2Stack />
+          </a>
         </div>
         <div className={`frame-content ${contentClassName}`}>{children}</div>
       </div>

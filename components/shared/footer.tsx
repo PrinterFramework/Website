@@ -1,5 +1,6 @@
 import { HiOutlineMailOpen } from 'react-icons/hi'
 import { FaGlobeAmericas } from 'react-icons/fa'
+import { AiOutlineBook } from 'react-icons/ai'
 
 export interface FooterI {}
 
@@ -7,9 +8,17 @@ export function Footer({}: FooterI) {
   return (
     <footer id="footer">
       <div className="container">
-        <p>Chris Cates &#169; 2023</p>
+        <p>Chris Cates &#169; {new Date().getFullYear()}</p>
 
         <div className="links">
+          <a
+            className="link"
+            href="https://v1.prntr.click"
+            target="v1.prntr.click"
+          >
+            <AiOutlineBook />
+            Legacy V1 Documentation
+          </a>
           <a
             className="link"
             href="https://chriscates.ca"

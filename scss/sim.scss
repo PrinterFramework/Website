@@ -6,7 +6,7 @@ section.sim {
   justify-content: center;
   width: 100%;
   min-height: 640px;
-  border-bottom: 4px solid rgb(64, 64, 64);
+  border-bottom: 1px solid rgb(64, 64, 64);
   overflow: hidden;
   padding :15px;
 
@@ -45,12 +45,11 @@ section.sim {
   div.multi-frame {
     display: flex;
     justify-content: center;
-    padding: 215px 0 0 0;
-    height: 480px;
+    padding: 60px 0 45px 0;
+    height: 640px;
 
     div.frame {
       margin: 0 15px;
-
       width: calc(50% - 30px);
 
       &.small {
@@ -58,6 +57,19 @@ section.sim {
       }
       &.large {
         width: calc(60% - 30px);
+      }
+
+      div.frame-content {
+        min-height: 240px;
+
+        &.sim-code {
+          position: relative;
+          pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+          height: 240px;
+        }
       }
     }
 
@@ -78,8 +90,8 @@ section.sim {
         position: static;
         width: 100%;
         height: auto;
-        margin: 0;
-        padding: 15px 0;
+        margin: 15px 0;
+        padding: 0;
 
         div.frame-body {
           position: relative;
@@ -87,16 +99,11 @@ section.sim {
           top: 0;
           height: auto;
           border-radius: 9px;
-
-          div.frame-content {
-            height: auto;
-          }
         }
       }
 
       div.frame.small div.frame-body div.frame-content {
         position: relative;
-        height: 240px;
 
         a.button {
           top: 50%;

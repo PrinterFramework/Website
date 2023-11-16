@@ -4,12 +4,16 @@ $copyFont: 'Montserrat';
 
 // Core Color Theme
 $primary: #C49A0F;
-$primarylight: #F2D577;
+$primarylight: rgb(219, 190, 96);
 
-// Frame Theme
 $red: #E9524A;
 $yellow: #F1AE1B;
 $green: #59C837;
+
+// Frame Theme
+$frame-header: rgb(35, 35, 35);
+$frame-body: #1E1E1E;
+$frame-text: #FFF;
 
 @mixin backgroundGradient {
   background: rgb(41, 41, 41);

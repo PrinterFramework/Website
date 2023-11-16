@@ -52,7 +52,6 @@ export class AppComponent extends App<AppInitialProps> {
         </Head>
         <Header />
         <Splash />
-        <Disclaimer />
         <Component {...pageProps} />
         <Footer />
       </>

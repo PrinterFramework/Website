@@ -18,15 +18,13 @@ export default function Config() {
         &ldquo;printer pattern&rdquo; command.
       </p>
 
-      <div className="flex-frames">
-        <Frame frameClassname="doc code">
-          <Editor height={350} code={PrinterConfig} />
-        </Frame>
+      <Frame frameClassname="doc code">
+        <Editor height={350} code={PrinterConfig} />
+      </Frame>
 
-        <Frame frameClassname="doc code">
-          <Editor height={350} code={PrinterConfig2} />
-        </Frame>
-      </div>
+      <Frame frameClassname="doc code">
+        <Editor height={350} code={PrinterConfig2} />
+      </Frame>
 
       <p>
         The following demonstrates what is generated when using the CRUD

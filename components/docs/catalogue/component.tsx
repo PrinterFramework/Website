@@ -18,26 +18,24 @@ export default function Component() {
         purposes when developing.
       </p>
 
-      <div className="flex-frames">
-        <Frame frameClassname="doc cli">
-          <pre className="bold primary">λ Usage</pre>
-          <pre>λ printer component [path]</pre>
-          <pre className="bold primary">λ Example Usage</pre>
-          <pre>λ printer component components/example</pre>
-          <pre className="bold primary">
-            λ Creates a new component in components/example
-          </pre>
-          <pre>λ ...</pre>
-          <pre>λ printer component components/multi/folder/example</pre>
-          <pre className="bold primary">
-            λ Creates a new component in components/multi/folder/example
-          </pre>
-        </Frame>
+      <Frame frameClassname="doc cli">
+        <pre className="bold primary">λ Usage</pre>
+        <pre>λ printer component [path]</pre>
+        <pre className="bold primary">λ Example Usage</pre>
+        <pre>λ printer component components/example</pre>
+        <pre className="bold primary">
+          λ Creates a new component in components/example
+        </pre>
+        <pre>λ ...</pre>
+        <pre>λ printer component components/multi/folder/example</pre>
+        <pre className="bold primary">
+          λ Creates a new component in components/multi/folder/example
+        </pre>
+      </Frame>
 
-        <Frame frameClassname="doc code">
-          <Editor code={CreateComponent} height={240} />
-        </Frame>
-      </div>
+      <Frame frameClassname="doc code">
+        <Editor code={CreateComponent} height={240} />
+      </Frame>
     </div>
   )
 }

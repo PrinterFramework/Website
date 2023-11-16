@@ -6,7 +6,7 @@ section.title {
   justify-content: center;
   width: 100%;
   min-height: 640px;
-  border-bottom: 4px solid rgb(64, 64, 64);
+  border-bottom: 1px solid rgb(64, 64, 64);
   overflow: hidden;
 
   div.copy {
@@ -58,12 +58,15 @@ section.title {
     }
   }
 
+  div.title-frame {
+    height: 480px;
+  }
+
   @media (max-width: 1024px) {
     flex-direction: column;
 
     div.copy {
       position: relative;
-      top: -150px;
       padding: 30px;
     }
   }
