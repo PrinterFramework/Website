@@ -42,6 +42,12 @@ section.sim {
     }
   }
 
+  div.frame {
+    div.frame-top {
+      pointer-events: none;
+    }
+  }
+
   div.multi-frame {
     display: flex;
     justify-content: center;

@@ -60,6 +60,9 @@ section.title {
 
   div.title-frame {
     height: 480px;
+    div.frame-top {
+      pointer-events: none;
+    }
   }
 
   @media (max-width: 1024px) {

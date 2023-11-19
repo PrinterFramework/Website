@@ -2,18 +2,17 @@
 
 div.frame {
   position: relative;
-  overflow: hidden;
   color: $frame-text;
   border: 1px solid transparentize($color: #FFF, $amount: 0.95);
   @include boxshadow2;
   border-radius: 9px;
+  overflow: hidden;
 
   div.frame-body {
     position: relative;
     width: 100%;
     height: 100%;
     background: $frame-body;
-    overflow: hidden;
   }
 
   div.frame-content {
@@ -35,7 +34,7 @@ div.frame {
     display: flex;
     align-items: center;
     padding: 0 10px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 9px 9px 0 0;
 
     a.frame-square {
       position: absolute;
@@ -51,6 +50,35 @@ div.frame {
       top: 10px;
       font-size: 14px;
       color: $primary;
+    }
+
+    div.frame-tooltip {
+      position: absolute;
+      left: -130px;
+      top: -7px;
+      width: 120px;
+      background: $frame-body;
+      border: 2px solid transparentize($color: #FFF, $amount: 0.95);
+      border-radius: 5px;
+      padding: 5px;
+      font-size: 10px;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    a.frame-square {
+      div.frame-tooltip {
+        left: -150px;
+      }
+    }
+
+    a.frame-plus, a.frame-square {
+      &:hover {
+        div.frame-tooltip {
+          opacity: 1;
+        }
+      }
     }
 
     div.frame-button {

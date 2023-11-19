@@ -1,6 +1,18 @@
-import { ReactNode } from 'react'
-import { AiOutlinePrinter } from 'react-icons/ai'
-import { HiOutlineSquare2Stack } from 'react-icons/hi2'
+import { ReactNode, useMemo } from 'react'
+import { AiOutlinePrinter, AiOutlineStar } from 'react-icons/ai'
+
+function generateId(length: number): string {
+  let result = ''
+  const characters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  const charactersLength = characters.length
+  let counter = 0
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength))
+    counter += 1
+  }
+  return result
+}
 
 export interface FrameI {
   children?: ReactNode
@@ -15,6 +27,12 @@ export function Frame({
   frameClassname,
   height
 }: FrameI) {
+  const id = useMemo(() => generateId(16), [generateId])
+
+  async function copyClipboard(text: string) {
+    await navigator.clipboard.writeText(text)
+  }
+
   return (
     <div className={`frame ${frameClassname}`}>
       <div className="frame-body" style={{ height }}>
@@ -23,14 +41,28 @@ export function Frame({
           <div className="frame-button yellow" />
           <div className="frame-button green" />
 
-          <a className="frame-plus">
+          <a
+            className="frame-plus"
+            onClick={(e) => {
+              const text = document.querySelector(`div#${id}`).textContent
+              console.log(text)
+              copyClipboard(text)
+            }}
+          >
             <AiOutlinePrinter />
+            <div className="frame-tooltip">Copy Contents</div>
           </a>
-          <a className="frame-square">
-            <HiOutlineSquare2Stack />
+          <a
+            className="frame-square"
+            onClick={(e) => copyClipboard(window.location.href)}
+          >
+            <AiOutlineStar />
+            <div className="frame-tooltip">Copy Link</div>
           </a>
         </div>
-        <div className={`frame-content ${contentClassName}`}>{children}</div>
+        <div className={`frame-content ${contentClassName}`} id={id}>
+          {children}
+        </div>
       </div>
     </div>
   )

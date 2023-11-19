@@ -69,10 +69,12 @@ export default function GettingStarted() {
           λ Debugs the scss/printer.scss file in scss/debug
         </pre>
         <pre>λ yarn scss</pre>
+        <pre className="bold primary">λ Compiles Prisma Client</pre>
+        <pre>λ yarn prisma</pre>
         <pre className="bold primary">
           λ Compiles Prisma Client and pushes new indices to your Database
         </pre>
-        <pre>λ yarn prisma</pre>
+        <pre>λ yarn prisma:update</pre>
       </Frame>
     </div>
   )
